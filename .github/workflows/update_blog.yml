@@ -17,11 +17,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    # - name: Set time zone
-    #   run: |
-    #     sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
-    #     echo "Asia/Seoul" | sudo tee /etc/timezone
-    #     date
+    - name: Set time zone
+      run: |
+        sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+        echo "Asia/Seoul" | sudo tee /etc/timezone
+        date
 
     - name: Push changes
       run: |
