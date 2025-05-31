@@ -3,7 +3,6 @@ import git
 import os
 
 # 벨로그 RSS 피드 URL
-# example : rss_url = 'https://api.velog.io/rss/@rimgosu'
 rss_url = 'https://api.velog.io/rss/@dev_ssj'
 
 # 깃허브 레포지토리 경로
@@ -18,6 +17,10 @@ if not os.path.exists(posts_dir):
 
 # 레포지토리 로드
 repo = git.Repo(repo_path)
+
+with repo.config_writer() as cw:
+    cw.set_value("user", "name", "dev-ssj")  # GitHub 사용자명
+    cw.set_value("user", "email", "ssj.sun.98@gmail.com")  # GitHub에 등록된 이메일
 
 # RSS 피드 파싱
 feed = feedparser.parse(rss_url)
