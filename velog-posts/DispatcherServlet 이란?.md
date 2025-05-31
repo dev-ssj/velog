@@ -1,7 +1,7 @@
 <h2 id="💡dispatcherservlet이란">💡DispatcherServlet이란?</h2>
 <blockquote>
 <p><code>DispatcherServlet</code>은 <code>javax.servlet.http.HttpServlet</code>을 상속한 클래스로서, Spring MVC의 핵심 프론트 컨트롤러 역할을 수행하는 클래스이다.
- 클라이언트의 모든 요청을 중앙에서 받아 적절한 컨트롤러로 전달하고, 처리 결과를 View로 연결해주는 역할을 한다.
+ 클라이언트의 모든 요청을 중앙에서 받아 적절한 컨트롤러로 전달하고, 처리 결과를 View로 연결해주는 역할을 한다.<br>
  <code>@SpringBootApplication</code>에 의해 자동으로 등록되며, 기본 URL패턴인 <code>/</code>에 매핑 된다.</p>
 </blockquote>
 <h2 id="💡dispatcherservlet의-주요-역할">💡DispatcherServlet의 주요 역할</h2>
