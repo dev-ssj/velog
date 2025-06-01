@@ -7,7 +7,7 @@ on:
         - main # 또는 워크플로우를 트리거하고 싶은 브랜치 이름
   workflow_dispatch:  # 수동 실행 트리거 추가
   schedule:
-    - cron: '0 0 * * *' # 매일 자정에 실행
+    - cron: '0 15 * * *' # 매일 자정에 실행
 
 jobs:
   update_blog:
@@ -17,11 +17,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    # - name: Set time zone
-    #   run: |
-    #     sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
-    #     echo "Asia/Seoul" | sudo tee /etc/timezone
-    #     date
+    - name: Set time zone
+      run: |
+        sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+        echo "Asia/Seoul" | sudo tee /etc/timezone
+        date
 
     - name: Push changes
       run: |
